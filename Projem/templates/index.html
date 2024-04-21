@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portföy Web Sitesi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!--NAVIGASYON-->
+    <nav>
+        <ul class="container">
+            <li><a href="/">Ana Sayfa</a></li>
+            <li><a href="/hakkimda">Hakkımda</a></li>
+            <li><a href="/iklim">Özet</a></li>
+        </ul>
+    </nav>
+
+    {% block ev %}
+    <h1>Hakkımda</h1>
+    <p>Üstte bulunan hakkımda kısmına dokunarak benle ilgili bilgi edinebilirsiniz.</p>
+     
+    <h1>Özet</h1>
+    <p>Özet kısmında discord sunucumda çıkardığınız özetlerin alt alta yazıldığını görebilirsiniz</p>
+
+    <h1>Discord</h1>
+    <p>Discord sunucusu : https://discord.gg/8uxy7zPZ 
+       Discordta $iklim komutunu kullanarak birkeç kaynak,
+       $ozet "buraya metin gelecek" yazarak kaynaklardan kopyaladığınız metnin özetini çıkarabilir,
+       $site yazarak ta bu site ile bağlantı kurabilirsiniz.
+
+    </p>
+    {% endblock %}
+
+    {% block about %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block home %}
+    <img src="static\meme_2.jpg" alt="" class="image">
+    {% endblock %}   
+</body>
+</html>
